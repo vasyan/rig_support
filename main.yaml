@@ -1,0 +1,14 @@
+session_name: miners
+windows:
+- window_name: miners
+  layout: tiled
+  panes:
+    - shell_command:                 # start zec
+        - cd ~/zec
+        - sudo ./start.sh
+    -
+    - shell_command:           # downvolt nvidia
+        - cd ~/sh
+        - sudo ./nvd_volt_down.sh
+    - shell_command:
+- sleep 5 && tmux send-keys -t 0 "$PASS" Enter && tmux send-keys -t 2 "$PASS" Enter

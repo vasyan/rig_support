@@ -2,5 +2,5 @@
 
 if [ ! -f /tmp/is_rig_inited ]; then
 	touch /tmp/is_rig_inited
-	cd ~/rig_support && git fetch && git checkout origin/${RIG_ID} && souce ./start.sh
+	cd ~/rig_support && git fetch && git checkout origin/${RIG_ID} && . ./start.sh
 fi
