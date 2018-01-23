@@ -5,18 +5,8 @@ windows:
   shell_command_before:
     - cd ~/                    # run as a first command in all panes
   panes:
-    - shell_command:                 # start zec
-        - cd /usr/local/zec
-        - sudo ./start.sh
-    -
-#    - shell_command:                 # start etn
-#        - cd /usr/local/xmr-stak-2.1.0/bin
-#        - ./xmr-stak
     - shell_command:           # downvolt nvidia
-        - cd ~/sh
-        - sudo ./nvd_volt_down.sh
-    - shell_command:           # downvolt nvidia
-        - cd /usr/local/claymore
+        - cd $PATH_ETH
         - sudo ./mine.sh
     - shell_command:
-        - sleep 10 && tmux send-keys -t 0 "$PASS" Enter && tmux send-keys -t 3 "$PASS" Enter && tmux send-keys -t 2 "$PASS" Enter
+        - sleep 5 && tmux send-keys -t 0 "$PASS" Enter

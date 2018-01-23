@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "Hello I'm start file and I'm updated" 
+echo "the rig will has been started" 
 tmuxp load ./main.yaml
