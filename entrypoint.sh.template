@@ -1,6 +1,10 @@
 #!bin/bash
 
-if [ ! -f /tmp/is_rig_inited ]; then
-	touch /tmp/is_rig_inited
-	cd ~/rig_support && git fetch && git checkout origin/${RIG_ID} && souce ./start.sh
-fi
+export WALLET_ETH=""
+export PATH_ETH=""
+export PATH_ZEC=""
+export PASS=""
+export RIG_ID=""
+
+sleep 20
+cd ~/rig_support && git fetch && git checkout origin/${RIG_ID} && souce ./start.sh
