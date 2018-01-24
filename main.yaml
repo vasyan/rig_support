@@ -9,4 +9,7 @@ windows:
         - cd $PATH_ETH
         - sudo ./mine.sh
     - shell_command:
-        - sleep 5 && tmux send-keys -t 0 "$PASS" Enter
+        - cd ~/amdgpu-pro-fans
+        - . ./amdgpu-pro-fans.sh -s 40
+    - shell_command:
+        - sleep 5 && tmux send-keys -t 0 "$PASS" Enter && tmux send-keys -t 1 "$PASS" Enter
