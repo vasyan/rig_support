@@ -12,4 +12,4 @@ DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 nvidia-settings --assign "[gpu:2]
 DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 nvidia-settings --assign "[gpu:3]/GPUGraphicsClockOffset[3]=100" --assign "[gpu:3]/GPUMemoryTransferRateOffset[3]=1400"
 DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 nvidia-settings --assign "[gpu:4]/GPUGraphicsClockOffset[3]=100" --assign "[gpu:4]/GPUMemoryTransferRateOffset[3]=1400"
 
-nvidia-settings --assign GPULogoBrightness=0
+DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 nvidia-settings --assign GPULogoBrightness=0
