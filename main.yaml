@@ -10,6 +10,6 @@ windows:
         - sudo ./mine.sh
     - shell_command:
         - cd ~/amdgpu-pro-fans
-        - . ./amdgpu-pro-fans.sh -s 40
+        - . ./amdgpu-pro-fans.sh -s 50
     - shell_command:
         - sleep 5 && tmux send-keys -t 0 "$PASS" Enter && tmux send-keys -t 1 "$PASS" Enter
