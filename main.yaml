@@ -1,14 +1,17 @@
-session_name: miners
+session_name: 4-pane-miners
 windows:
 - window_name: miners
   layout: tiled
+  shell_command_before:
+    - cd ~/                    # run as a first command in all panes
   panes:
-    - shell_command:                 # start zec
-        - cd ~/zec
-        - sudo ./start.sh
-    -
     - shell_command:           # downvolt nvidia
-        - cd ~/sh
-        - sudo ./nvd_volt_down.sh
+        - cd $PATH_ZEC
+        - sudo ./classic.sh
+    - shell_command:           # downvolt nvidia
+        - cd ~/rig_support
+        - sudo ./clock.sh
     - shell_command:
-- sleep 5 && tmux send-keys -t 0 "$PASS" Enter && tmux send-keys -t 2 "$PASS" Enter
+        - sleep 5 && tmux send-keys -t 0 "$PASS" Enter
+        - sleep 10 && tmux send-keys -t 1 "$PASS" Enter
+
