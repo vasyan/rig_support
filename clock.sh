@@ -1,6 +1,6 @@
 #!bin/bash
 
-sudo nvidia-smi -i 0 -pl 120
+sudo nvidia-smi -i 0 -pl 110
 sudo nvidia-smi -i 1 -pl 130
 sudo nvidia-smi -i 2 -pl 125
 sudo nvidia-smi -i 3 -pl 130

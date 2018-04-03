@@ -5,12 +5,12 @@ windows:
   shell_command_before:
     - cd ~/                    # run as a first command in all panes
   panes:
-    - shell_command:           # downvolt nvidia
+    - shell_command:
         - cd $PATH_ZEC
-        - sudo ./classic.sh
+        - sudo ./start.sh
     - shell_command:           # downvolt nvidia
         - cd ~/rig_support
-        - sudo ./clock.sh
+        - source ./clock.sh
     - shell_command:
         - sleep 5 && tmux send-keys -t 0 "$PASS" Enter
         - sleep 10 && tmux send-keys -t 1 "$PASS" Enter
